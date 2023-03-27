@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <img src="icon128.png" alt="Pagemap Icon">
 </p>
 
