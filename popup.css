@@ -1,0 +1,68 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #1347FF;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  white-space: nowrap;
+  transition: background-color 100ms ease-in-out;
+}
+
+button:hover {
+  background-color: #1845E4;
+}
+
+#sitemap-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.page-link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 100ms ease-in-out;
+}
+
+.page-link:hover {
+  background-color: #F7F7F7;
+}
+
+.page-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.page-title-icon {
+  width: 8px;
+  height: 8px;
+  background-color: #1347FF;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.page-title {
+  font-weight: 600;
+  color: black;
+  font-size: 14px;
+}
+
+.page-url {
+  color: #8C8C8C;
+  font-size: 14px;
+}

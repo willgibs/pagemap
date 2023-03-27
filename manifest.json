@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Pagemap",
+  "version": "1.0.0",
+  "description": "Generate page-specific sitemaps instantly! With a single click, create an easy-to-read sitemap for the current page.",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Pagemap"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
