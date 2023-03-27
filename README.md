@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" alt="Pagemap Icon">
+  <img src="icon128.png" alt="Pagemap Icon">
 </p>
 
 # Pagemap
