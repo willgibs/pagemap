@@ -4,6 +4,8 @@
 
 # Pagemap
 
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/willgibs.svg?style=social&label=Follow%20%40willgibs)](https://twitter.com/willgibs)
+
 Generate page-specific sitemaps on the fly with just one click! Pagemap creates a clean and easy-to-read sitemap for the current page, complete with page titles and URLs. Say goodbye to tedious manual sitemap creation and hello to streamlined website analysis.
 
 ### Features
