@@ -16,6 +16,7 @@ Pagemap is a Chrome extension that generates a visual sitemap of the current pag
 ## Download
 
 To download Pagemap from the Chrome Web Store, click [here](https://chrome.google.com/webstore/detail/dummy-link).
+
 *Note: Pagemap is currently pending review, link will be updated when approved
 
 ## Local Installation Guide
