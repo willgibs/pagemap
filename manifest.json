@@ -2,7 +2,8 @@
   "manifest_version": 3,
   "name": "Pagemap",
   "version": "1.0.0",
-  "description": "Generate page-specific sitemaps instantly! With a single click, create an easy-to-read sitemap for the current page.",
+  "description": "A Chrome extension that instantly generates and exports a list of all links on a webpage in just one click.",
+  "author": "Will Gibson",
   "permissions": ["tabs", "scripting"],
   "host_permissions": ["*://*/*"],
   "action": {
