@@ -1,68 +1,73 @@
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 12px;
-  border-radius: 4px;
+  margin: 0px;
+  padding: 6px 12px;
 }
 
-button {
-  background-color: #1347FF;
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
+#generate-sitemap {
+  background-color: #0066FF;
   border: none;
+  color: white;
   white-space: nowrap;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
   transition: background-color 100ms ease-in-out;
+  margin: 6px 0;
 }
 
-button:hover {
-  background-color: #1845E4;
+#generate-sitemap:hover {
+  background-color: #005AE1;
 }
 
-#sitemap-container {
-  max-height: 400px;
-  overflow-y: auto;
+#export {
+  background-color: #FFFFFF;
+  border: none;
+  color: #0066FF;
+  text-decoration: none;
+  display: none; /* Hidden by default */
+  font-size: 14px;
+  margin: 6px 0;
+  cursor: pointer;
+  padding: 0px 4px;
 }
 
-.page-link {
+.arrow-icon {
+  width: 16px;
+  height: 12px;
+  margin-left: 4px;
+  vertical-align: middle;
+  margin-top: -3px;
+  transition: margin-left 100ms ease-in-out;
+}
+
+#export:hover .arrow-icon {
+  margin-left: 6px;
+}
+
+.link-wrapper {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin: 6px 0;
-  padding: 6px;
-  border-radius: 4px;
   text-decoration: none;
-  transition: background-color 100ms ease-in-out;
+  border-left: 2px solid #0066FF;
+  padding: 6px;
+  margin: 12px 0;
+  transition: background-color 50ms ease-in-out;
 }
 
-.page-link:hover {
-  background-color: #F7F7F7;
+.link-wrapper:hover {
+  background-color: #F4F4F4;
 }
 
-.page-title-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-}
-
-.page-title-icon {
-  width: 8px;
-  height: 8px;
-  background-color: #1347FF;
-  border-radius: 100%;
-  flex-shrink: 0;
-}
-
-.page-title {
+.link-title {
+  font-size: 14px;
   font-weight: 600;
-  color: black;
-  font-size: 14px;
+  color: #000000;
+  margin-bottom: 0px;
 }
 
-.page-url {
-  color: #8C8C8C;
+.link-url {
   font-size: 14px;
+  color: #8C8C8C;
 }
