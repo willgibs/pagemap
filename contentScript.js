@@ -6,25 +6,26 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     for (const link of links) {
       const title = link.innerText || link.textContent || 'undefined';
       const url = link.href;
-      sitemap.push({ title, url });
+      sitemap.push({
+        title,
+        url
+      });
     }
 
     const sitemapHTML = sitemap
       .map(
         (entry) =>
-          `<a class="page-link" href="${entry.url}" target="_blank">
-            <div class="page-title-wrapper">
-              <div class="page-title-icon"></div>
-              <div class="page-title">${entry.title}</div>
-            </div>
-            <div class="page-url">${entry.url}</div>
+          `<a href="${entry.url}" target="_blank" class="link-wrapper">
+            <div class="link-title">${entry.title}</div>
+            <div class="link-url">${entry.url}</div>
           </a>`
       )
       .join('');
 
     chrome.runtime.sendMessage({
       action: 'sitemapGenerated',
-      sitemap: sitemapHTML
+      sitemap: sitemapHTML,
+      sitemapData: sitemap // Send sitemap data along with sitemap HTML
     });
   }
 });
