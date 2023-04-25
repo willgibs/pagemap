@@ -2,14 +2,9 @@
 
 # Pagemap
 
-<p align="left">
-  <a href="https://twitter.com/willgibs">
+<a href="https://twitter.com/willgibs">
     <img src="https://img.shields.io/twitter/url/https/twitter.com/willgibs.svg?style=social&label=Follow%20%40willgibs" alt="Twitter">
-  </a>
-  <a href="https://github.com/MShawon/github-clone-count-badge">
-    <img src="https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/MShawon/cf89f3274d06170b8a4973039aa6220a/raw/clone.json&logo=github" alt="GitHub Clones">
-  </a>
-</p>
+ </a>
 
 Pagemap is a Chrome extension that generates a visual sitemap of the current page with a single click, and allows you to export the gathered links as a CSV file. This tool is designed for users who need a quick and easy way to obtain a list of all links on a webpage.
 
