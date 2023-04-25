@@ -15,9 +15,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     const sitemapHTML = sitemap
       .map(
         (entry) =>
-          `<a href="${entry.url}" target="_blank" class="link-wrapper">
-            <div class="link-title">${entry.title}</div>
-            <div class="link-url">${entry.url}</div>
+          `<a href="${entry.url}" target="_blank" class="link">
+            <div class="link_title">${entry.title}</div>
+            <div class="link_url">${entry.url}</div>
           </a>`
       )
       .join('');

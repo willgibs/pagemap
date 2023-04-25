@@ -19,7 +19,7 @@ function exportToCSV(sitemap, pageTitle) {
   downloadCSV(csvContent, `PM - ${pageTitle}.csv`);
 }
 
-document.getElementById('generate-sitemap').addEventListener('click', async () => {
+document.getElementById('generate').addEventListener('click', async () => {
   try {
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     const pageTitle = tabs[0].title;
@@ -29,12 +29,13 @@ document.getElementById('generate-sitemap').addEventListener('click', async () =
     });
     chrome.tabs.sendMessage(tabs[0].id, { action: 'generateSitemap' });
 
-    const generateButton = document.getElementById('generate-sitemap');
-    generateButton.style.display = 'none';
+    document.getElementById('container_generate').style.display = 'none';
+    document.getElementById('container_links').style.display = 'block';
 
     const exportButton = document.getElementById('export');
     exportButton.style.display = 'inline-block'; // Show export button
     exportButton.addEventListener('click', () => exportToCSV(sitemapData, pageTitle));
+
   } catch (error) {
     console.error(error);
   }
@@ -44,8 +45,12 @@ let sitemapData = [];
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'sitemapGenerated') {
-    const sitemapContainer = document.getElementById('links-container');
+    const sitemapContainer = document.getElementById('links');
     sitemapContainer.innerHTML = request.sitemap;
     sitemapData = request.sitemapData;
   }
+});
+
+document.getElementById('close_icon').addEventListener('click', () => {
+  window.close();
 });

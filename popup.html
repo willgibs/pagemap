@@ -10,12 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button id="generate-sitemap">Generate Pagemap</button>
-  <button id="export" style="display: none;">
-    Export to CSV
-    <img src="arrow.svg" alt="arrow" class="arrow-icon">
-  </button>
-  <div id="links-container"></div>
+  <div id="container_generate">
+    <img src="logo.svg" alt="logo" class="logo">
+    <p class="generate_text">Get started by generating a pagemap below.</p>
+    <button id="generate">Generate Pagemap</button>
+  </div>
+  <div id="container_links" style="display:none">
+    <div class="nav">
+      <button id="export" style="display:none">
+        Export to CSV
+        <img src="arrow.svg" alt="arrow" class="export_icon">
+      </button>
+      <img src="close.svg" alt="close" id="close_icon">
+    </div>
+    <div id="links"></div>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
