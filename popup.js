@@ -1,3 +1,4 @@
+// Create and download a CSV file
 function downloadCSV(csv, filename) {
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
@@ -9,6 +10,7 @@ function downloadCSV(csv, filename) {
   document.body.removeChild(link);
 }
 
+// Convert sitemap data to CSV content and trigger download
 function exportToCSV(sitemap, pageTitle) {
   const csvContent = [
     ['Link Title', 'URL'],
@@ -19,7 +21,8 @@ function exportToCSV(sitemap, pageTitle) {
   downloadCSV(csvContent, `PM - ${pageTitle}.csv`);
 }
 
-document.getElementById('generate').addEventListener('click', async () => {
+// Handle generate button click event
+async function onGenerateButtonClick() {
   try {
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     const pageTitle = tabs[0].title;
@@ -39,18 +42,30 @@ document.getElementById('generate').addEventListener('click', async () => {
   } catch (error) {
     console.error(error);
   }
-});
+}
 
-let sitemapData = [];
+// Handle sitemap data messages from content script
+function onSitemapGenerated(request, sender, sendResponse) {
+  const sitemapContainer = document.getElementById('links');
+  sitemapContainer.innerHTML = request.sitemap;
+  sitemapData = request.sitemapData;
+}
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'sitemapGenerated') {
-    const sitemapContainer = document.getElementById('links');
-    sitemapContainer.innerHTML = request.sitemap;
-    sitemapData = request.sitemapData;
-  }
-});
-
-document.getElementById('close_icon').addEventListener('click', () => {
+// Close the extension popup
+function closePopup() {
   window.close();
-});
+}
+
+// Initialize event listeners
+function init() {
+  document.getElementById('generate').addEventListener('click', onGenerateButtonClick);
+  document.getElementById('close_icon').addEventListener('click', closePopup);
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === 'sitemapGenerated') {
+      onSitemapGenerated(request, sender, sendResponse);
+    }
+  });
+}
+
+// Initialize the extension popup
+init();
