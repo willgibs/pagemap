@@ -25,7 +25,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     chrome.runtime.sendMessage({
       action: 'sitemapGenerated',
       sitemap: sitemapHTML,
-      sitemapData: sitemap // Send sitemap data along with sitemap HTML
+      sitemapData: sitemap // Send sitemap data with sitemap HTML
     });
   }
 });
