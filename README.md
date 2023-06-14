@@ -17,7 +17,7 @@ Pagemap is a Chrome extension that generates a visual sitemap of the current pag
 
 To download Pagemap from the Chrome Web Store, click [here](https://chrome.google.com/webstore/detail/pagemap/kmgkhecojimncfnoiaajcpekejfklejl).
 
-Note: Pagemap has been updated to Linkflow, with a range of new functionality and a fresh UI. You can find the Linkflow repository [here]().
+Note: Pagemap has been updated to Linkflow, with a range of new functionality and a fresh UI. You can find the Linkflow repository [here](https://github.com/willgibs/Linkflow).
 
 ## Local Installation Guide
 
